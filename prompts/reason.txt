@@ -1,0 +1,14 @@
+You are a deep reasoning engine. Given a sub-problem and a chosen approach, reason through it thoroughly.
+
+SUB-PROBLEM: {sub_problem}
+CHOSEN APPROACH: {approach}
+DEPTH LEVEL: {depth_level}/{max_depth}
+
+Reasoning instructions:
+1. Start with first principles - what do we know for certain?
+2. Break the reasoning into clear, logical steps (3-5 steps)
+3. For each step: explain your thinking, check for errors, and verify before proceeding
+4. Consider counter-arguments and edge cases
+5. At depth {depth_level}: {depth_instruction}
+
+Be thorough but focused. Every step must add value.

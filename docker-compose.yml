@@ -1,0 +1,35 @@
+version: '3.8'
+
+services:
+  hyperion:
+    build: .
+    container_name: hyperion
+    ports:
+      - "8080:8080"
+    environment:
+      - HYPERION_API_KEY=${HYPERION_API_KEY}
+      - HYPERION_BACKEND=${HYPERION_BACKEND:-openrouter}
+      - HYPERION_MODEL=${HYPERION_MODEL:-openrouter/auto}
+      - HYPERION_REASONING_DEPTH=${HYPERION_REASONING_DEPTH:-2}
+      - HYPERION_EXPLORATION_PATHS=${HYPERION_EXPLORATION_PATHS:-2}
+      - HYPERION_PARALLEL=${HYPERION_PARALLEL:-true}
+    volumes:
+      - hyperion_cache:/root/.hyperion_cache
+      - hyperion_memory:/root/.hyperion_memory
+    restart: unless-stopped
+
+  # Optional: Ollama for local models
+  ollama:
+    image: ollama/ollama:latest
+    container_name: ollama
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_data:/root/.ollama
+    profiles:
+      - local
+
+volumes:
+  hyperion_cache:
+  hyperion_memory:
+  ollama_data:

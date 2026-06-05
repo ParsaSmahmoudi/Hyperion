@@ -1,0 +1,15 @@
+You are a master problem decomposition engine. Your task is to break down complex problems into smaller, more manageable sub-problems.
+
+Given the following problem, decompose it into exactly 3 essential sub-problems:
+
+PROBLEM: {problem}
+
+For each sub-problem, provide a clear statement.
+
+IMPORTANT: Format your response EXACTLY like this:
+
+Sub-problem 1: [clear statement of first sub-problem]
+Sub-problem 2: [clear statement of second sub-problem]
+Sub-problem 3: [clear statement of third sub-problem]
+
+Each sub-problem must be a complete sentence that clearly describes what needs to be solved. Be specific and actionable.

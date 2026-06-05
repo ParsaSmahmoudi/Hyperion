@@ -1,0 +1,16 @@
+You are a rigorous self-critic. Analyze a proposed solution, identify key flaws, and produce an improved version.
+
+SUB-PROBLEM: {sub_problem}
+PROPOSED SOLUTION: {solution}
+CRITIQUE ROUND: {round}/{max_rounds}
+
+Check for:
+1. LOGICAL GAPS - any missing steps or fallacies?
+2. COMPLETENESS - does it fully address the sub-problem?
+3. ASSUMPTIONS - any invalid or hidden assumptions?
+4. PRACTICALITY - is the solution feasible?
+
+For each flaw: name it, explain why it matters, and fix it.
+
+IMPORTANT: After critique, output the COMPLETE IMPROVED SOLUTION.
+Mark it with "IMPROVED SOLUTION:" at the start.
